@@ -1,10 +1,13 @@
 use std::{cell::RefCell, rc::Rc};
 
-use crate::practica::{TreeNode, sum_root_to_leaf_preorden};
+use crate::practica::{TreeNode, sum_root_to_leaf_preorden, sort_by_bits};
 
 mod practica;
 
 fn main() {
+    
+}
+fn _conteo_binario() {
     let tree_derecho = TreeNode::new(1);
     let tree_izquierdo = TreeNode::new(0);
     let mut root = TreeNode::new(1);
@@ -12,6 +15,10 @@ fn main() {
     root.right = Some(Rc::new(RefCell::new(tree_derecho))); //derecha
     let total_preorden = sum_root_to_leaf_preorden(Some(Rc::new(RefCell::new(root.clone()))));
     println!("El total del arbol en preorden es: {total_preorden}");
-    let value = 5<<4;
-    println!("Valores: {value}")
 }
+fn _ordenamiento_por_unos() {
+    let arr =vec![1,3,4,8];
+    let arr = sort_by_bits(arr);
+    println!("Arreglo ordenado: {:?}", arr)
+}
+
