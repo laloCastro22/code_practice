@@ -13,6 +13,7 @@ use std::rc::Rc;
 
 //Definition for a binary tree node.
 #[derive(Debug, PartialEq, Eq, Clone)]
+#[allow(dead_code)]
 pub struct TreeNode {
     pub val: i32,
     pub left: Option<Rc<RefCell<TreeNode>>>,
@@ -21,6 +22,7 @@ pub struct TreeNode {
 
 impl TreeNode {
     #[inline]
+    #[allow(dead_code)]
     pub fn new(val: i32) -> Self {
         TreeNode {
             val,
@@ -52,7 +54,7 @@ impl TreeNode {
    /// 
    /// Regla general
    /// *x<<n=x⋅2n*
-
+#[allow(dead_code)]
 pub fn sum_root_to_leaf_preorden(root: Option<Rc<RefCell<TreeNode>>>) -> i32 {
     fn recorrido_pre_orden(node: Option<Rc<RefCell<TreeNode>>>, current: i32) -> i32 {
         if let Some(n) = node {

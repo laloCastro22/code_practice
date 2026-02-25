@@ -1,5 +1,6 @@
 /// Esta es una implementación de ordenamiento por número de 1 que hay de una representacion binaria de un número n
 /// Esta implementacion a mano es para probar la logica de ordenamiento 
+#[allow(dead_code)]
 pub fn sort_by_bits(
     arr: Vec<i32>
 ) -> Vec<i32> {
