@@ -1,6 +1,6 @@
 use std::{cell::RefCell, rc::Rc};
 
-use crate::practica::{TreeNode, sum_root_to_leaf_preorden, sort_by_bits, two_sum};
+use crate::practica::{TreeNode, sum_root_to_leaf_preorden, sort_by_bits, two_sum, num_steps};
 
 mod practica;
 
@@ -26,5 +26,9 @@ fn _target_mediante_indices() {
     let target = 9;
     let indices = two_sum(nums, target);
     println!("Los indices que sumados me dan el target son: {:?}", indices)
+}
+fn _pasos_al_uno() {
+    let n_steps = num_steps("1101".to_string());
+    println!("Pasos: {n_steps}");
 }
 
