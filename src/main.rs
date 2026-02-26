@@ -1,6 +1,6 @@
 use std::{cell::RefCell, rc::Rc};
 
-use crate::practica::{TreeNode, sum_root_to_leaf_preorden, sort_by_bits};
+use crate::practica::{TreeNode, sum_root_to_leaf_preorden, sort_by_bits, two_sum};
 
 mod practica;
 
@@ -20,5 +20,11 @@ fn _ordenamiento_por_unos() {
     let arr =vec![1,3,4,8];
     let arr = sort_by_bits(arr);
     println!("Arreglo ordenado: {:?}", arr)
+}
+fn _target_mediante_indices() {
+    let nums = vec![11,15, 2,7,];
+    let target = 9;
+    let indices = two_sum(nums, target);
+    println!("Los indices que sumados me dan el target son: {:?}", indices)
 }
 
