@@ -1,6 +1,6 @@
 use std::{cell::RefCell, rc::Rc};
 
-use crate::practica::{TreeNode, sum_root_to_leaf_preorden, sort_by_bits, two_sum, num_steps};
+use crate::practica::{TreeNode, sum_root_to_leaf_preorden, sort_by_bits, two_sum, num_steps, min_operations};
 
 mod practica;
 
@@ -30,5 +30,10 @@ fn _target_mediante_indices() {
 fn _pasos_al_uno() {
     let n_steps = num_steps("1101".to_string());
     println!("Pasos: {n_steps}");
+}
+fn _operaciones_minimas() {
+    let binari = String::from("0101");
+    let operaciones = min_operations(binari, 3);
+    println!("Numero minimo de operaciones: {operaciones}");
 }
 
