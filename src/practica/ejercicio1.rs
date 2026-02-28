@@ -53,7 +53,7 @@ impl TreeNode {
    /// 0000 1000 = 8
    /// 
    /// Regla general
-   /// *x<<n=x⋅2n*
+   /// *x<<n=x⋅2^n*
 #[allow(dead_code)]
 pub fn sum_root_to_leaf_preorden(root: Option<Rc<RefCell<TreeNode>>>) -> i32 {
     fn recorrido_pre_orden(node: Option<Rc<RefCell<TreeNode>>>, current: i32) -> i32 {
