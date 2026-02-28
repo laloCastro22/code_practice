@@ -1,7 +1,8 @@
 use std::{cell::RefCell, rc::Rc};
 
 use crate::practica::{
-    ListNode, TreeNode, add_two_numbers, min_operations, num_steps, sort_by_bits, sum_root_to_leaf_preorden, two_sum
+    ListNode, TreeNode, add_two_numbers, min_operations, num_steps, sort_by_bits, sum_root_to_leaf_preorden, two_sum,
+    concatenated_binary
 };
 
 mod practica;
@@ -61,4 +62,9 @@ fn _suma_nodos_ligados_carry() {
     }));
     let value = add_two_numbers(l1, l2);
     println!("La operacion acumulativa es: {:?}", value);
+}
+fn _modulo() {
+    let n = 12;
+    let e = concatenated_binary(n);
+    println!("El resto del numero despues de la aplicacion del moludo: {e}");
 }
