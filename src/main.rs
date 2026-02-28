@@ -1,6 +1,8 @@
 use std::{cell::RefCell, rc::Rc};
 
-use crate::practica::{TreeNode, sum_root_to_leaf_preorden, sort_by_bits, two_sum, num_steps, min_operations};
+use crate::practica::{
+    ListNode, TreeNode, add_two_numbers, min_operations, num_steps, sort_by_bits, sum_root_to_leaf_preorden, two_sum
+};
 
 mod practica;
 
@@ -17,15 +19,18 @@ fn _conteo_binario() {
     println!("El total del arbol en preorden es: {total_preorden}");
 }
 fn _ordenamiento_por_unos() {
-    let arr =vec![1,3,4,8];
+    let arr = vec![1, 3, 4, 8];
     let arr = sort_by_bits(arr);
     println!("Arreglo ordenado: {:?}", arr)
 }
 fn _target_mediante_indices() {
-    let nums = vec![11,15, 2,7,];
+    let nums = vec![11, 15, 2, 7];
     let target = 9;
     let indices = two_sum(nums, target);
-    println!("Los indices que sumados me dan el target son: {:?}", indices)
+    println!(
+        "Los indices que sumados me dan el target son: {:?}",
+        indices
+    )
 }
 fn _pasos_al_uno() {
     let n_steps = num_steps("1101".to_string());
@@ -36,4 +41,24 @@ fn _operaciones_minimas() {
     let operaciones = min_operations(binari, 3);
     println!("Numero minimo de operaciones: {operaciones}");
 }
+fn _suma_nodos_ligados_carry() {
+    // 2 -> 4 -> 3
+    let l1: Option<Box<ListNode>> = Some(Box::new(ListNode {
+        val: 2,
+        next: Some(Box::new(ListNode {
+            val: 4,
+            next: Some(Box::new(ListNode { val: 3, next: None })),
+        })),
+    }));
 
+    // 5 -> 6 -> 4
+    let l2: Option<Box<ListNode>> = Some(Box::new(ListNode {
+        val: 5,
+        next: Some(Box::new(ListNode {
+            val: 6,
+            next: Some(Box::new(ListNode { val: 4, next: None })),
+        })),
+    }));
+    let value = add_two_numbers(l1, l2);
+    println!("La operacion acumulativa es: {:?}", value);
+}
