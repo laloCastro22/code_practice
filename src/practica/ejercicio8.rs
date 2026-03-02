@@ -1,6 +1,6 @@
 /// La variable `ultimo_uno` es para convertir el problema en:
-/// “Quiero que en la posición i haya un valor ≤ i, moviendo elementos con swaps adyacentes al costo mínimo.
-/// Es como recorrerlo sin volverlo
+/// Quiero que en la posición i haya un valor ≤ i, moviendo elementos con swaps adyacentes al costo mínimo.
+/// Es como recorrerlo sin hacer el movimiento en si 
 #[allow(dead_code)]
 pub fn min_swaps(grid: Vec<Vec<i32>>) -> i32 {
     let n = grid.len();
