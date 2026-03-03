@@ -2,7 +2,7 @@ use std::{cell::RefCell, rc::Rc};
 
 use crate::practica::{
     ListNode, TreeNode, add_two_numbers, min_operations, num_steps, sort_by_bits, sum_root_to_leaf_preorden, two_sum,
-    concatenated_binary, min_swaps
+    concatenated_binary, min_swaps, find_kth_bit
 };
 
 mod practica;
@@ -72,4 +72,8 @@ fn _numero_minimo_intercambios() {
     let matriz = vec![vec![0,0,1],vec![1,1,0],vec![1,0,0]];
     let min_swaps = min_swaps(matriz);
     println!("Numero minimo de intercambios de filas: {:?}", min_swaps);
+}
+fn _bit_esimo() {
+    let bit = find_kth_bit(3, 1);
+    println!("El k-esimo bit es: {bit}");
 }
