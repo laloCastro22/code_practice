@@ -2,7 +2,7 @@ use std::{cell::RefCell, rc::Rc};
 
 use crate::practica::{
     ListNode, TreeNode, add_two_numbers, min_operations, num_steps, sort_by_bits, sum_root_to_leaf_preorden, two_sum,
-    concatenated_binary, min_swaps, find_kth_bit
+    concatenated_binary, min_swaps, find_kth_bit, num_special
 };
 
 mod practica;
@@ -76,4 +76,9 @@ fn _numero_minimo_intercambios() {
 fn _bit_esimo() {
     let bit = find_kth_bit(3, 1);
     println!("El k-esimo bit es: {bit}");
+}
+fn _numero_posiciones_especiales() {
+    let mat = vec![vec![1,0,0],vec![0,1,0],vec![0,0,1]]; 
+    let posiciones_especiales = num_special(mat);
+    println!("Número de pocisiones especiales: {posiciones_especiales}")
 }
