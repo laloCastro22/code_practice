@@ -2,7 +2,7 @@ use std::{cell::RefCell, rc::Rc};
 
 use crate::practica::{
     ListNode, TreeNode, add_two_numbers, min_operations, num_steps, sort_by_bits, sum_root_to_leaf_preorden, two_sum,
-    concatenated_binary, min_swaps, find_kth_bit, num_special
+    concatenated_binary, min_swaps, find_kth_bit, num_special, min_operations_11
 };
 
 mod practica;
@@ -81,4 +81,9 @@ fn _numero_posiciones_especiales() {
     let mat = vec![vec![1,0,0],vec![0,1,0],vec![0,0,1]]; 
     let posiciones_especiales = num_special(mat);
     println!("Número de pocisiones especiales: {posiciones_especiales}")
+}
+fn _numero_minimo_operaciones() {
+    let s = "111011".to_string();
+    let total_minimo_movientos = min_operations_11(s);
+    println!("El numero minimo de operaciones es: {total_minimo_movientos}");
 }
