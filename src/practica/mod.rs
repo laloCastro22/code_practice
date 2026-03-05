@@ -8,6 +8,7 @@ mod ejercicio7;
 mod ejercicio8;
 mod ejercicio9;
 mod ejercicio10;
+mod ejercicio11;
 
 pub use self::ejercicio1::{TreeNode, sum_root_to_leaf_preorden};
 pub use self::ejercicio2::sort_by_bits;
@@ -19,3 +20,4 @@ pub use self::ejercicio7::concatenated_binary;
 pub use self::ejercicio8::min_swaps;
 pub use self::ejercicio9::find_kth_bit;
 pub use self::ejercicio10::num_special;
+pub use self::ejercicio11::min_operations_11;
