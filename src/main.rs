@@ -89,3 +89,8 @@ fn _numero_minimo_operaciones() {
     let total_minimo_movientos = min_operations_11(s);
     println!("El numero minimo de operaciones es: {total_minimo_movientos}");
 }
+fn _unico_segmento_unos() {
+    let s = "101".to_string();
+    let is_segment = check_ones_segment(s);
+    println!("Hay un unico segmento de unos: {is_segment}");
+}
