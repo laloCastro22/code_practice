@@ -2,13 +2,15 @@ use std::{cell::RefCell, rc::Rc};
 
 use crate::practica::{
     ListNode, TreeNode, add_two_numbers, min_operations, num_steps, sort_by_bits, sum_root_to_leaf_preorden, two_sum,
-    concatenated_binary, min_swaps, find_kth_bit, num_special, min_operations_11
+    concatenated_binary, min_swaps, find_kth_bit, num_special, min_operations_11, check_ones_segment
 };
 
 mod practica;
 
 fn main() {
-    
+    let s = "101".to_string();
+    let is_segment = check_ones_segment(s);
+    println!("Hay un unico segmento de unos: {is_segment}");
 }
 fn _conteo_binario() {
     let tree_derecho = TreeNode::new(1);
